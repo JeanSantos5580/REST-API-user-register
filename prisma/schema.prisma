@@ -8,12 +8,32 @@ datasource db {
 }
 
 model User {
-  id         String   @id @default(uuid())
-  first_name String
-  last_name  String
-  age        Int
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
+  id          String        @id @default(uuid())
+  first_name  String
+  last_name   String
+  age         Int
+  created_at  DateTime      @default(now())
+  updated_at  DateTime      @updatedAt
+  UserProfile UserProfile[]
 
   @@map("user")
+}
+
+model Profile {
+  id          String        @id @default(uuid())
+  bio         String
+  UserProfile UserProfile[]
+
+  @@map("profile")
+}
+
+model UserProfile {
+  id         String  @id @default(uuid())
+  id_profile String
+  profile    Profile @relation(fields: [id_profile], references: [id])
+  id_user    String
+  user       User    @relation(fields: [id_user], references: [id])
+  bio        String
+
+  @@map("user_profile")
 }

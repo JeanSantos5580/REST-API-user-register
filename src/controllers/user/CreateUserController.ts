@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
-import { prismaClient } from '../database/prismaClient'
+import { prismaClient } from '../../database/prismaClient'
 
 export async function createUserController(req: Request, res: Response) {
     try {
         const { first_name, last_name, age } = req.body
-        const user = await prismaClient.user.create({
+        const newUser = await prismaClient.user.create({
             data: {
                 first_name,
                 last_name,
@@ -12,10 +12,10 @@ export async function createUserController(req: Request, res: Response) {
             }
         })
 
-        return res.json(user)
+        return res.json(newUser)
     } catch (error) {
-        console.log('Erro ao criar produto:', error)
-        return res.status(500).json({ error: 'Erro ao criar produto' })
+        console.log('Error creating product:', error)
+        return res.status(500).json({ error: 'Error creating product' })
     }
 }
 

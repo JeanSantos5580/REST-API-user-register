@@ -6,7 +6,7 @@ export async function editUserController(req: Request, res: Response) {
         const { id } = req.params
         const {first_name, last_name, age} = req.body
 
-        const editedUser = await prismaClient.user.update({
+        const updatedUser = await prismaClient.user.update({
             where: { id: id },
             data: {
                 first_name,
@@ -15,7 +15,7 @@ export async function editUserController(req: Request, res: Response) {
             }
         })
 
-        return res.json(editedUser)
+        return res.json(updatedUser)
     } catch (error) {
         console.log('Error editing user data:', error)
         return res.status(500).json({ error: 'Error editing user data.' })

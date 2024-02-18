@@ -3,11 +3,12 @@ import { prismaClient } from "../../database/prismaClient"
 
 export async function createProfileController(req: Request, res: Response) {
     try {
-        const { bio } = req.body
+        const { bio, user_id } = req.body
 
         const newProfile = await prismaClient.profile.create({
             data: {
-                bio
+                bio,
+                user_id
             }
         })
         return res.json(newProfile)

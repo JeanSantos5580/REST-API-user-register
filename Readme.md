@@ -1,8 +1,4 @@
-Claro, vou aumentar o tamanho dos títulos para que se destaquem mais. Aqui está o README atualizado:
-
----
-
-# API CRUD Básica
+# API CRUD DE REGISTRO DE USUÁRIOS.
 
 ## Esta é uma API CRUD básica que permite gerenciar usuários e perfis.
 

@@ -47,7 +47,7 @@ Até a data de publicação deste projeto, os bancos de dados suportados são: p
 
 No terminal execute:
 
-`npx migrate dev`
+`npx prisma migrate dev`
 
 Após a execução do comando serão plicadas as migrações ao banco de dados escolhido.
 

@@ -40,10 +40,11 @@ Será criado um arquivo .env para configuração de conexão com o banco de dado
 Dentro do arquivo schema.prisma dentro da pasta prisma, selecione o banco de dados desejado modificando o provider do datasource.
 
 Até a data de publicação deste projeto, os bancos de dados suportados são: postgres, mysql, sqlserver, cockroach e mongodb.
-Execute o comando npx migrate dev para aplicar as migrações ao banco de dados escolhido.
 
 No terminal execute:
 
 `npx migrate dev`
+
+Após a execução do comando serão plicadas as migrações ao banco de dados escolhido.
 
 Após o carregamento das migrações no banco de dados, a aplicação estará pronta para uso.

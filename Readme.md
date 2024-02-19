@@ -29,3 +29,21 @@
 - **GetAllUsers, GetAllProfiles**: Não requer parâmetros.
 - **GetAllUserProfiles**: Não requer parâmetros.
 - **FindUserProfileById**: `{id}`
+
+## Execução Local
+No terminal, execute o seguinte comando:
+
+`npm run setup` 
+
+Será criado um arquivo .env para configuração de conexão com o banco de dados de sua preferência.
+
+Dentro do arquivo schema.prisma dentro da pasta prisma, selecione o banco de dados desejado modificando o provider do datasource.
+
+Até a data de publicação deste projeto, os bancos de dados suportados são: postgres, mysql, sqlserver, cockroach e mongodb.
+Execute o comando npx migrate dev para aplicar as migrações ao banco de dados escolhido.
+
+No terminal execute:
+
+`npx migrate dev`
+
+Após o carregamento das migrações no banco de dados, a aplicação estará pronta para uso.

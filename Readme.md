@@ -31,6 +31,10 @@
 - **FindUserProfileById**: `{id}`
 
 ## Execução Local
+Instale as depedências do projeto:
+
+`npm i`
+
 No terminal, execute o seguinte comando:
 
 `npm run setup` 

@@ -31,24 +31,24 @@
 - **FindUserProfileById**: `{id}`
 
 ## Execução Local
-Instale as depedências do projeto:
+- Instale as depedências do projeto:
 
 `npm i`
 
-No terminal, execute o seguinte comando:
+- No terminal, execute o seguinte comando:
 
 `npm run setup` 
 
 Será criado um arquivo .env para configuração de conexão com o banco de dados de sua preferência.
 
-Dentro do arquivo schema.prisma dentro da pasta prisma, selecione o banco de dados desejado modificando o provider do datasource.
+- Dentro do arquivo schema.prisma dentro da pasta prisma, selecione o banco de dados desejado modificando o provider do datasource.
 
 Até a data de publicação deste projeto, os bancos de dados suportados são: postgres, mysql, sqlserver, cockroach e mongodb.
 
-No terminal execute:
+- No terminal execute:
 
 `npx prisma migrate dev`
 
 Após a execução do comando serão plicadas as migrações ao banco de dados escolhido.
 
-Após o carregamento das migrações no banco de dados, a aplicação estará pronta para uso.
+- Após o carregamento das migrações no banco de dados, a aplicação estará pronta para uso.
